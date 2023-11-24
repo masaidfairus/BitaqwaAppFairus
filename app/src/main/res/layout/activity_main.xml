@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.DashboardActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/bg_header_dashboard_morning"
+            android:id="@+id/iv_header"
+            android:scaleType="centerCrop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_text_view"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/text_welcome"
+            android:textColor="@color/color_text"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_header"
+            app:layout_constraintLeft_toLeftOf="@+id/iv_header"
+            app:layout_constraintRight_toRightOf="@id/iv_header"
+            app:layout_constraintTop_toTopOf="@id/iv_header"/>
+
+        <HorizontalScrollView
+            android:id="@+id/list_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/bg_rounded_menu"
+            android:padding="20dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_header">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_menu_doa"
+                    android:id="@+id/iv_icon_menu_doa"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/text_menu_doa"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_icon_menu_doa"
+                    app:layout_constraintStart_toStartOf="@+id/iv_icon_menu_doa"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_icon_menu_doa"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_menu_dzikir"
+                    android:id="@+id/iv_icon_menu_dzikir"
+                    app:layout_constraintStart_toEndOf="@id/iv_icon_menu_doa"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/text_menu_dzikir"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_icon_menu_dzikir"
+                    app:layout_constraintStart_toStartOf="@+id/iv_icon_menu_dzikir"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_icon_menu_dzikir"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:src="@drawable/ic_menu_zakat"
+                    android:id="@+id/iv_icon_menu_zakat"
+                    app:layout_constraintStart_toEndOf="@id/iv_icon_menu_dzikir"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/text_menu_zakat"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_icon_menu_zakat"
+                    app:layout_constraintStart_toStartOf="@+id/iv_icon_menu_zakat"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_icon_menu_zakat"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:src="@drawable/ic_menu_jadwal_sholat"
+                    android:id="@+id/iv_icon_menu_jadwal_sholat"
+                    app:layout_constraintStart_toEndOf="@id/iv_icon_menu_zakat"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/text_menu_jadwal_sholat"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_icon_menu_jadwal_sholat"
+                    app:layout_constraintStart_toStartOf="@+id/iv_icon_menu_jadwal_sholat"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_icon_menu_jadwal_sholat"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:src="@drawable/ic_menu_video_kajian"
+                    android:id="@+id/iv_icon_menu_video_kajian"
+                    app:layout_constraintStart_toEndOf="@id/iv_icon_menu_jadwal_sholat"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/text_menu_jadwal_kajian"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_icon_menu_video_kajian"
+                    app:layout_constraintStart_toStartOf="@+id/iv_icon_menu_video_kajian"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_icon_menu_video_kajian"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/iv_inspiration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="@id/list_item"
+            app:layout_constraintTop_toBottomOf="@id/list_item"
+            android:text="@string/text_inspirasi"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:textColor="@color/color_text"
+            android:textSize="20sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_inspiration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:nestedScrollingEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_inspiration"
+            tools:listitem="@layout/item_row_inspiration"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
